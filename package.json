@@ -1,12 +1,12 @@
 {
-  "name": "coding-template",
+  "name": "typescript-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "node app project example in typescript with common npm scripts, with semantic-release and lint set",
   "main": "index.js",
   "scripts": {
     "develop": "DEBUG=*,-nodemon* nodemon src/index.ts",
     "build": "rm -rf dist && tsc -p tsconfig.json",
-    "build_2": "rm -rf dist && tsc --build tsconfig.prod.json",
+    "build-prod": "rm -rf dist && tsc --build tsconfig.prod.json",
     "start": "node -r ./tsconfig-paths-bootstrap.js dist/index.js",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -34,11 +34,6 @@
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "jest": {
     "testEnvironment": "node",
